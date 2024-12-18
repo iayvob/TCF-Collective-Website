@@ -23,11 +23,9 @@ import { Button } from "@/src/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/src/components/ui/form";
 
 import { Input } from "@/src/components/ui/input";
@@ -35,7 +33,7 @@ import { Input } from "@/src/components/ui/input";
 import { useToast } from "@/src/components/ui/use-toast";
 
 import { Textarea } from "@/src/components/ui/textarea";
-import { PiCheckLight, PiSmiley } from "react-icons/pi";
+import { PiSmiley } from "react-icons/pi";
 import Navbar from "@/src/components/navbar";
 
 const FormSchema = z.object({
@@ -112,11 +110,10 @@ export default function ContactForm() {
   return (
     <div className=" w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
       <Navbar
-        scrollToGraphicDesign={() => {}}
-        scrollToCEO={() => {}}
-        scrollToVideoProduction={() => {}}
+        scrollToWhoWeAre={() => {}}
+        scrollToOurChannels={() => {}}
         scrollToBrands={() => {}}
-        scrollToServices={() => {}}
+        scrollToFaq={() => {}}
       />
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div className="">
@@ -130,7 +127,8 @@ export default function ContactForm() {
               text-gray-300
                     "
           >
-            Let&apos;s talk about how The Content Factory can help your team work better.
+            Let&apos;s talk about how The Content Factory can help your team
+            work better.
           </div>
 
           <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-2xl my-4 hidden md:flex md:flex-col">
