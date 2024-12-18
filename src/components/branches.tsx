@@ -37,8 +37,9 @@ export default function Branches() {
       viewport={{
         once: true,
       }}
+      className="flex w-full flex-col items-center"
     >
-      <div className="flex flex-col md:flex-row justify-between gap-x-4">
+      <div className="max-w-[90%] flex flex-col md:flex-row justify-between gap-x-4">
         {companies.map((companie, index) => (
           <ThreeDCardExample
             key={index}

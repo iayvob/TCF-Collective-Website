@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { AlignJustify, X } from "lucide-react";
+import { AlignJustify, ArrowRightIcon, X } from "lucide-react";
 import logoLg from "../../public/images/logo/logo1.png";
 import logoSm from "../../public/images/logo/logo.ico";
 import Image from "next/image";
@@ -118,15 +118,9 @@ const Navbar = ({
           <Link
             href="/contact"
             className="
-            inline-flex h-12 animate-shimmer items-center justify-center 
-            rounded-md border border-slate-800 bg-[linear-gradient(110deg,#ff0048,45%,#6e00f1,55%,#ffc224)] 
-            bg-[length:200%_100%] px-6 font-medium text-slate-900 transition-colors
-             focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
-              focus:ring-offset-slate-50
-
-            "
+            group items-center flex gap-2 justify-center rounded-xl border border-slate-800 bg-gradient-to-b from-[#6e00f1] to-[#ff003f] text-neutral-300 py-2 px-6"
           >
-            Contact
+            Contact <ArrowRightIcon className="group-hover:translate-x-1 transition-all" />
           </Link>
         </motion.div>
       </div>

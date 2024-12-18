@@ -49,15 +49,14 @@ const Brands = () => {
         once: true,
       }}
     >
-      <div className=" p-4 mx-auto relative z-10  w-full pt-20 md:pt-32">
+      <div className="mx-auto relative z-10 w-full pt-20 md:pt-32">
         <div
-          className="text-4xl md:pb-8 md:text-7xl text-center 
-        bg-clip-text text-transparent bg-gradient-to-b from-[#ff003f] to-[#6e00f1] bg-opacity-50"
+          className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#ff003f] to-[#6e00f1] bg-opacity-50"
         >
           Recommended By
         </div>
 
-        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto">
+        <p className="mt-6 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto">
           The best brands in Arabe world and world wide recommend us
         </p>
 

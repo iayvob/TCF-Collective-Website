@@ -1,17 +1,5 @@
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { HoverEffect } from "@/src/components/ui/card-hover-effect";
-import {
-  PiAppStoreLogo,
-  PiBrandy,
-  PiHeadsetFill,
-  PiLock,
-  PiMegaphone,
-  PiMonitor,
-  PiPaintBrush,
-  PiPrinter,
-  PiStorefront,
-  PiTarget,
-  PiVideoCamera,
-} from "react-icons/pi";
 
 export function CardHoverEffectDemo() {
   return (
@@ -23,62 +11,32 @@ export function CardHoverEffectDemo() {
 export const projects = [
   {
     icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiTarget className="w-8 h-8 text-[#ffc224]" />
-      </div>
+      <Avatar className="w-32 h-32 md:w-20 md:h-20">
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      </Avatar>
     ),
-    title: "Brand Strategy and Development",
+    title: "TCF Development",
     description:
       "Helping businesses define and build their brand identity, positioning, and messaging to stand out in competitive markets.",
   },
   {
     icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiPaintBrush className="w-8 h-8 text-[#ffc224]" />
-      </div>
+      <Avatar className="w-32 h-32 md:w-20 md:h-20">
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      </Avatar>
     ),
-    title: "Creative Design Services",
+    title: "TCF Services",
     description:
       "This could include logo design, visual identity systems, and graphic design for both digital and print media to create a cohesive brand image.",
   },
   {
     icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiPrinter className="w-8 h-8 text-[#ffc224]" />
-      </div>
+      <Avatar className="w-32 h-32 md:w-20 md:h-20">
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      </Avatar>
     ),
-    title: "Content Creation and Copywriting",
+    title: "TCF Copywriting",
     description:
       "Crafting compelling content for websites, social media, and campaigns that aligns with the brand voice and goals.",
-  },
-  {
-    icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiMegaphone className="w-8 h-8 text-[#ffc224]" />
-      </div>
-    ),
-    title: "Social Media",
-    description:
-      "We offer social media management and ad creation services. We can help you grow your social media presence and reach new customers.",
-  },
-  {
-    icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiVideoCamera className="w-8 h-8 text-[#ffc224]" />
-      </div>
-    ),
-    title: "Video Production and Animation",
-    description:
-      "Creating promotional videos, brand films, and animated content that communicates the brand story effectively.",
-  },
-  {
-    icon: (
-      <div className="bg-blue-100 p-4 rounded-full">
-        <PiHeadsetFill className="w-8 h-8 text-[#ffc224]" />
-      </div>
-    ),
-    title: "Event Planning and Marketing",
-    description:
-      "Organizing branded events, product launches, and other promotional activities to engage customers directly.",
   },
 ];

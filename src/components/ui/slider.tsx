@@ -34,92 +34,77 @@ const SliderOne = () => {
   }
 
   return (
-    <motion.div
-      className="flex gap-3"
-      initial="initial"
-      whileInView="animate"
-      variants={fadeInAnimationVariantsDiv1}
-      viewport={{
-        once: true,
-      }}
-    >
-      <Slider {...settings}>
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src={slide}
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl
-                      "
-            />
-          </div>
-        </>
+    <div className="relative">
+      {/* Top Black Background */}
+      <div className="bg-black h-[50vh] w-full"></div>
 
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src={slide1}
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl 
-                      "
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src={slide2}
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl 
-                      "
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src={slide3}
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl 
-                      "
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src={slide4}
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl 
-                      "
-            />
-          </div>
-        </>
-      </Slider>
-    </motion.div>
+      {/* Middle Slider */}
+      <div className="absolute top-[50%] left-0 w-full transform -translate-y-1/2 z-10">
+        <motion.div
+          className="flex gap-3"
+          initial="initial"
+          whileInView="animate"
+          variants={fadeInAnimationVariantsDiv1}
+          viewport={{
+            once: true,
+          }}
+        >
+          <Slider {...settings}>
+            <div className="rounded-md px-2 md:p-10">
+              <Image
+                priority
+                src={slide}
+                alt="slide"
+                width={500}
+                height={500}
+                className="rounded-2xl"
+              />
+            </div>
+            <div className="rounded-md px-2 md:p-10">
+              <Image
+                priority
+                src={slide1}
+                alt="slide"
+                width={500}
+                height={500}
+                className="rounded-2xl"
+              />
+            </div>
+            <div className="rounded-md px-2 md:p-10">
+              <Image
+                priority
+                src={slide2}
+                alt="slide"
+                width={500}
+                height={500}
+                className="rounded-2xl"
+              />
+            </div>
+            <div className="rounded-md px-2 md:p-10">
+              <Image
+                priority
+                src={slide3}
+                alt="slide"
+                width={500}
+                height={500}
+                className="rounded-2xl"
+              />
+            </div>
+            <div className="rounded-md px-2 md:p-10">
+              <Image
+                priority
+                src={slide4}
+                alt="slide"
+                width={500}
+                height={500}
+                className="rounded-2xl"
+              />
+            </div>
+          </Slider>
+        </motion.div>
+      </div>
+      <div className="bg-white h-[50vh] w-full rounded-t-3xl"></div>
+    </div>
   );
 };
 

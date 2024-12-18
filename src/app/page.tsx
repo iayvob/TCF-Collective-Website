@@ -5,11 +5,12 @@ import Navbar from "@/src/components/navbar";
 import SliderOne from "@/src/components/ui/slider";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import OurChannels from "../components/our-channels";
 import Brands from "../components/brands";
 import WhoWeAre from "../components/whoWeAre";
 import FAQS from "../components/faq";
 import { fadeInAnimationVariantsDiv } from "../lib/animations";
+import BranchesSection from "../components/branches-section";
+import OurChannels from "../components/our-channels";
 
 export default function Home() {
   const whoWeAreRef = useRef<HTMLDivElement>(null);
@@ -55,7 +56,7 @@ export default function Home() {
           }}
           className="text-4xl pb-5 md:text-7xl px-6 text-center font-bold font-Roboto bg-clip-text text-transparent bg-gradient-to-b from-[#ff003f] to-[#6e00f1] bg-neutral-400 bg-opacity-50"
         >
-          TCF Collective
+          The Content Factory Collective
         </motion.div>
         <motion.div
           initial="initial"
@@ -64,10 +65,10 @@ export default function Home() {
           viewport={{
             once: true,
           }}
-          className="mt-4 text-lg font-normal  text-neutral-300 max-w-xl text-center mx-auto px-4"
+          className="mt-4 text-lg font-normal text-neutral-300 max-w-xl text-center mx-auto px-4"
         >
           Explore our ventures and see how we connect, create, and inspire.
-          <p className="bg-clip-text block text-transparent text-[#ff003f]">
+          <p className="bg-clip-text block text-normal text-[#6e00f1]">
             Empowering Businesses with Innovation and Creativity
           </p>
         </motion.div>
@@ -82,7 +83,7 @@ export default function Home() {
         >
           <Link
             href={"/contact"}
-            className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+            className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2 mx-auto my-6 text-white hover:text-gray-900 hover:bg-neutral-300 transition-all"
           >
             Get in Touch
           </Link>
@@ -93,6 +94,7 @@ export default function Home() {
         </div>
         <div ref={whoWeAreRef}>
           <WhoWeAre />
+          <BranchesSection />
         </div>
         <div ref={ourChannelsRef}>
           <OurChannels />
