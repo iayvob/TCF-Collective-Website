@@ -11,42 +11,13 @@ import FAQS from "../components/faq";
 import { fadeInAnimationVariantsDiv } from "../lib/animations";
 import BranchesSection from "../components/branches-section";
 import OurChannels from "../components/our-channels";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
-  const whoWeAreRef = useRef<HTMLDivElement>(null);
-  const ourChannelsRef = useRef<HTMLDivElement>(null);
-  const brandsRef = useRef<HTMLDivElement>(null);
-  const faqRef = useRef<HTMLDivElement>(null);
-
-  const scrollToWhoWeAre = () => {
-    whoWeAreRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-  };
-
-  const scrollToOurChannels = () => {
-    ourChannelsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToBrands = () => {
-    brandsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToFaq = () => {
-    faqRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <div className="w-full items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Navbar
-        scrollToWhoWeAre={scrollToWhoWeAre}
-        scrollToOurChannels={scrollToOurChannels}
-        scrollToBrands={scrollToBrands}
-        scrollToFaq={scrollToFaq}
-      />
-      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+    <div className="w-full items-center justify-center bg-black antialiased bg-grid-white/[0.02] relative">
+      <Navbar />
+      <div className="mx-auto relative z-10 w-full">
         <motion.div
           initial="initial"
           whileInView="animate"
@@ -54,9 +25,19 @@ export default function Home() {
           viewport={{
             once: true,
           }}
-          className="text-4xl pb-5 md:text-7xl px-6 text-center font-bold font-Roboto bg-clip-text text-transparent bg-gradient-to-b from-[#ff003f] to-[#6e00f1] bg-neutral-400 bg-opacity-50"
+          className="text-[1.8rem] pt-10 md:pt-20 md:text-7xl text-center font-bold font-Roboto bg-clip-text text-transparent bg-gradient-to-b from-[#6e00f1] to-[#ff003f] bg-neutral-400 bg-opacity-50"
         >
-          The Content Factory Collective
+          T
+          <Typewriter
+            words={["he Content Factory Collective"]}
+            loop={false}
+            cursorColor="white"
+            cursorBlinking={true}
+            cursorStyle="|"
+            typeSpeed={120}
+            deleteSpeed={60}
+            delaySpeed={4000}
+          />
         </motion.div>
         <motion.div
           initial="initial"
@@ -65,7 +46,7 @@ export default function Home() {
           viewport={{
             once: true,
           }}
-          className="mt-4 text-lg font-normal text-neutral-300 max-w-xl text-center mx-auto px-4"
+          className="my-8 text-[0.9rem] md:text-[1.5rem] font-normal text-neutral-300 max-w-4xl text-center mx-auto px-4"
         >
           Explore our ventures and see how we connect, create, and inspire.
           <p className="bg-clip-text block text-normal text-[#6e00f1]">
@@ -80,29 +61,30 @@ export default function Home() {
           viewport={{
             once: true,
           }}
+          className="pb-10 md:pb-20"
         >
           <Link
             href={"/contact"}
-            className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2 mx-auto my-6 text-white hover:text-gray-900 hover:bg-neutral-300 transition-all"
+            className="cursor-pointer text-[0.9rem] md:text-[1.5rem] md:h-12 h-9 flex items-center justify-center border rounded-full w-32 md:w-48 mx-auto text-white hover:text-gray-900 hover:bg-neutral-300 transition-all"
           >
             Get in Touch
           </Link>
         </motion.div>
 
-        <div className="w-full pt-20">
+        <div className="w-full">
           <SliderOne />
         </div>
-        <div ref={whoWeAreRef}>
+        <section id="whoWeAre">
           <WhoWeAre />
           <BranchesSection />
-        </div>
-        <div ref={ourChannelsRef}>
+        </section>
+        <div id="ourChannels">
           <OurChannels />
         </div>
-        <div ref={brandsRef}>
+        <div id="brands">
           <Brands />
         </div>
-        <div ref={faqRef}>
+        <div id="faq">
           <FAQS />
         </div>
       </div>

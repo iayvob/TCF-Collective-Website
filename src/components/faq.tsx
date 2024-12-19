@@ -19,12 +19,9 @@ const FAQS = () => {
       viewport={{
         once: true,
       }}
-      className=" mt-10 md:py-10 bg-[#f6f5f4] w-full
-        rounded-3xl
-        
-        "
+      className="pt-10 md:pt-20 bg-gray-100 w-full rounded-t-3xl"
     >
-      <div className=" p-10 md:p-4 md:px-20">
+      <div className="p-10 md:p-4 md:px-20">
         <motion.div
           initial="initial"
           whileInView="animate"

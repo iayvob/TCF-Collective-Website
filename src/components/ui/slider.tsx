@@ -103,7 +103,7 @@ const SliderOne = () => {
           </Slider>
         </motion.div>
       </div>
-      <div className="bg-white h-[50vh] w-full rounded-t-3xl"></div>
+      <div className="bg-gray-100 h-[50vh] w-full rounded-t-3xl"></div>
     </div>
   );
 };

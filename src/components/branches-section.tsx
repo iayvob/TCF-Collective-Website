@@ -6,7 +6,7 @@ import Branches from "./branches";
 
 export default function BranchesSection() {
   return (
-    <div className="pt-10 pb-16 flex flex-col items-center w-full">
+    <div className="py-10 md:py-20 flex flex-col items-center w-full">
       <motion.div
         initial="initial"
         whileInView="animate"

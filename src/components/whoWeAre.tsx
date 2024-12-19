@@ -9,7 +9,7 @@ import {
 
 const WhoWeAre = () => {
   return (
-    <div className="bg-white rounded-b-3xl pt-10 pb-16 flex flex-col items-center">
+    <div className="bg-gray-100 rounded-b-3xl py-10 md:py-20 pb-16 flex flex-col items-center">
       <motion.div
         initial="initial"
         whileInView="animate"

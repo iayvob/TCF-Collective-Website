@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const OurChannels = () => {
   return (
-    <div className=" w-full bg-white rounded-3xl py-3">
+    <div className="w-full bg-gray-100 rounded-3xl py-3">
       <motion.div
         initial="initial"
         whileInView="animate"
@@ -14,7 +14,7 @@ const OurChannels = () => {
         viewport={{
           once: true,
         }}
-        className="max-w-5xl mx-auto bg-white"
+        className="max-w-5xl mx-auto"
       >
         <div
           className="text-4xl md:text-7xl text-center

@@ -7,20 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
 import { motion } from "framer-motion";
+import { Url } from "../lib/utils";
 
-interface NavbarProps {
-  scrollToWhoWeAre: () => void;
-  scrollToOurChannels: () => void;
-  scrollToBrands: () => void;
-  scrollToFaq: () => void;
-}
-
-const Navbar = ({
-  scrollToWhoWeAre,
-  scrollToOurChannels,
-  scrollToBrands,
-  scrollToFaq,
-}: NavbarProps) => {
+const Navbar = () => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
   const toggleDropDown = () => {
@@ -62,30 +51,25 @@ const Navbar = ({
           </Link>
         </motion.div>
         <motion.div
-          className="cursor-pointer hidden 
-            md:flex space-x-10 items-center
-             text-slate-300 text-center 
-             bg-clip-text text-transparent 
-             bg-gradient-to-b from-neutral-50
-              to bg-neutral-400 bg-opacity-50"
+          className="cursor-pointer hidden md:flex space-x-10 items-center text-slate-300 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50"
           initial={{ opacity: 0, y: "-80%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div onClick={scrollToWhoWeAre} className="hover:text-gray-50">
+          <Link href={`${Url}#whoWeAre`} className="hover:text-gray-50">
             Who We Are
-          </div>
-          <div onClick={scrollToOurChannels} className="hover:text-gray-50">
+          </Link>
+          <Link href={`${Url}#ourChannels`} className="hover:text-gray-50">
             Our Channels
-          </div>
+          </Link>
 
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
+          <Link href={`${Url}#brands`} className="hover:text-gray-50">
             Brands
-          </div>
+          </Link>
 
-          <div onClick={scrollToFaq} className="hover:text-gray-50">
+          <Link href={`${Url}#faq`} className="hover:text-gray-50">
             FAQ
-          </div>
+          </Link>
         </motion.div>
 
         <div className="flex md:hidden">
@@ -96,10 +80,7 @@ const Navbar = ({
               className="w-8 h-8 text-slate-300 cursor-pointer"
             >
               <X />
-              <DropDownMenu
-                onClose={closeDropDown}
-                scrollToServices={scrollToFaq} // Pass scrollToServices
-              />
+              <DropDownMenu onClose={closeDropDown} />
             </div>
           ) : (
             <AlignJustify
@@ -120,7 +101,8 @@ const Navbar = ({
             className="
             group items-center flex gap-2 justify-center rounded-xl border border-slate-800 bg-gradient-to-b from-[#6e00f1] to-[#ff003f] text-neutral-300 py-2 px-6"
           >
-            Contact <ArrowRightIcon className="group-hover:translate-x-1 transition-all" />
+            Contact{" "}
+            <ArrowRightIcon className="group-hover:translate-x-1 transition-all" />
           </Link>
         </motion.div>
       </div>

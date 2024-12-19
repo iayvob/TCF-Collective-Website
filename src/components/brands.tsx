@@ -49,7 +49,7 @@ const Brands = () => {
         once: true,
       }}
     >
-      <div className="mx-auto relative z-10 w-full pt-20 md:pt-32">
+      <div className="mx-auto relative z-10 w-full py-10 md:py-20">
         <div
           className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#ff003f] to-[#6e00f1] bg-opacity-50"
         >

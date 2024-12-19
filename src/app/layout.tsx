@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className="font-Roboto font-bold">
+      <body suppressHydrationWarning={true} className="font-Roboto font-bold scroll-smooth">
         <Analytics />
         {children}
       </body>
