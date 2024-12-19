@@ -109,24 +109,13 @@ export default function ContactForm() {
 
   return (
     <div className=" w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
-      <Navbar
-        scrollToWhoWeAre={() => {}}
-        scrollToOurChannels={() => {}}
-        scrollToBrands={() => {}}
-        scrollToFaq={() => {}}
-      />
+      <Navbar />
       <div className="md:flex items-start justify-center md:py-20 px-6">
-        <div className="">
+        <div>
           <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Contact US
           </div>
-          <div
-            className="
-              
-              py-4
-              text-gray-300
-                    "
-          >
+          <div className="py-4 text-gray-300">
             Let&apos;s talk about how The Content Factory can help your team
             work better.
           </div>
@@ -158,15 +147,7 @@ export default function ContactForm() {
           {!submitted ? (
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="
-            space-y-4
-            h-full
-            border rounded-3xl p-10
-            md:w-1/3
-            
-            
-                     
-                        "
+              className="space-y-4 h-full border rounded-3xl p-10 md:w-1/3"
             >
               <div className="md:flex items-center gap-6 ">
                 <FormField
@@ -286,13 +267,7 @@ export default function ContactForm() {
               <div className="flex gap-4 items-center">
                 <div>
                   <Checkbox
-                    className="
-                outline
-                border-2
-                text-sm
-                font-light
-                bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400
-                "
+                    className="outline border-2 text-sm font-light bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
                   />
                 </div>
                 <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
@@ -304,11 +279,7 @@ export default function ContactForm() {
               <div className="flex items-center gap-4">
                 <Button
                   type="submit"
-                  className="
-                            text-sm
-                            font-light
-                        
-                            "
+                  className="text-sm font-light"
                   disabled={loading}
                   onClick={() => form.handleSubmit(onSubmit)}
                 >
@@ -319,20 +290,7 @@ export default function ContactForm() {
           ) : (
             <>
               <div
-                className="
-        text-xl 
-        
-        md:text-2xl 
-        flex 
-        items-center
-        justify-center
-        flex-col
-        
-
- 
-        px-8
-
-        "
+                className="text-xl md:text-2xl flex items-center justify-center flex-col px-8"
               >
                 <div className="w-80 py-20">
                   <PiSmiley className="text-6xl text-[#6c6684] mx-auto" />
